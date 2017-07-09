@@ -15,11 +15,13 @@ body {
 @media only screen and (min-width: 768px) {}
   body {
     background: #deeaee;
+    color: #c94c4c;
     font-family: 'Ruda', sans-serif;
     margin: 0;
   }
 
   a {
+    color: #c94c4c;
     text-decoration: none;
   }
 
@@ -28,7 +30,25 @@ body {
   }
 
   h1 {
+    font-size: 48px;
     text-align: center;
+  }
+
+  nav {
+  }
+
+  .button {
+    background: #eea29a;
+    border: 1px solid #eea29a;
+    border-radius: 6px;
+    color: #c94c4c;
+    font-size: 16px;
+    font-weight: 700;
+    height: 45px;
+    line-height: 45px;
+    margin: 10px auto;
+    text-align: center;
+    width: 280px;
   }
 
   #container {
