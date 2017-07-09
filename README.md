@@ -14,7 +14,7 @@ creator:
 This is my JavaScript Racer implementation. Thought maybe we could use a little Scandinavian touch.
 
 This was the inspiration for my landing page:
-![](images/Screen Shot 2017-07-09 at 3.38.31 PM.png)
+![](assets/ScreenShot.png)
 
 ## Exercise
 
