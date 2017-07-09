@@ -6,6 +6,12 @@
  * font-family: 'Fira Sans', sans-serif;
  * font-family: 'Asap', sans-serif;
  * font-family: 'Ruda', sans-serif;
+ *
+ * Colors:
+ *   #deeaee (222, 234, 238)
+ *   #b1cbbb (177, 203, 187)
+ *   #eea29a (238, 162, 154)
+ *   #c94c4c (201, 76, 76)
  */
 
 body {
@@ -15,13 +21,13 @@ body {
 @media only screen and (min-width: 768px) {}
   body {
     background: #deeaee;
-    color: #c94c4c;
+    color: rgba(201, 76, 76, 1);
     font-family: 'Ruda', sans-serif;
     margin: 0;
   }
 
   a {
-    color: #c94c4c;
+    color: rgba(201, 76, 76, 1);
     text-decoration: none;
   }
 
@@ -34,14 +40,11 @@ body {
     text-align: center;
   }
 
-  nav {
-  }
-
   .button {
-    background: #eea29a;
-    border: 1px solid #eea29a;
+    background: #fff;
+    border: 1px solid rgba(238, 162, 154, 1);
     border-radius: 6px;
-    color: #c94c4c;
+    color: rgba(201, 76, 76, 1);
     font-size: 16px;
     font-weight: 700;
     height: 45px;
@@ -51,15 +54,34 @@ body {
     width: 280px;
   }
 
+  .button a:hover {
+    color: rgba(201, 76, 76, .8);
+  }
+
+  #theGame {
+    background: rgba(201, 76, 76, 1);
+    border-color: rgba(201, 76, 76, 1);
+    color: #fff;
+  }
+
+  #theGame a {
+    color: #fff;
+  }
+
+  #theGame:hover {
+    background: rgba(201, 76, 76, .8);
+    border-color: rgba(201, 76, 76, .8);
+  }
+
   #container {
-    background: #b1cbbb;
+    background: rgba(177, 203, 187, 1);
     height: 300px;
     margin: 0 auto;
     width: 750px;
   }
 
   #winningLine {
-    background: #c94c4c;
+    background: rgba(201, 76, 76, 1);
     height: 300px;
     left: 700px;
     position: relative;
