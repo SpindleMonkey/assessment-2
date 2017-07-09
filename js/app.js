@@ -4,11 +4,14 @@
 const keyA = 97;
 const keyL = 108;
 
+let winner = null;
+const crown = '5px dotted #c94c4c';
+
 let racerOneStart = 0;
-const racerOneEnd = 800;
+const racerOneEnd = 600;
 
 let racerTwoStart = 0;
-const racerTwoEnd = 800;
+const racerTwoEnd = 600;
 
 /**
  * grab hold of the 2 racers and position them at the 
@@ -24,8 +27,8 @@ racerTwo.style.left = racerTwoStart + 'px';
  * Rather than move each racer 1 step at a time, move
  * each racer a random number of steps at a time!
  */
-const min = Math.ceil(3);
-const max = Math.floor(15);
+const min = Math.ceil(5);
+const max = Math.floor(19);
 function addRandom() {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
@@ -39,33 +42,49 @@ function addRandom() {
  * And to add a little uncertainty to the race,
  * each move will move a random distance (see addRandom())
  */
-window.addEventListener('keypress', function (theKey) {
+function moveRacer(theKey) {
   //console.log(theKey);
-  switch(theKey.keyCode) {
-    case keyA: {
-      // 'a' = the racer on the left side
-      racerOneStart += addRandom();
-      racerOne.style.left = racerOneStart + 'px';
-      if (racerOneStart >= racerOneEnd) {
-        // end of race!
-        racerOne.style.border = '5px solid red';
+  if (!winner) {
+    switch(theKey.keyCode) {
+      case keyA: {
+       // 'a' = the racer on the left side
+        racerOneStart += addRandom();
+        racerOne.style.left = racerOneStart + 'px';
+        if (racerOneStart >= racerOneEnd) {
+          // end of race!
+          racerOne.style.border = crown;
+          winner = keyA;
+        }
+        break;
       }
-      break;
-    }
 
-    case keyL: {
-      // 'l' = the racer on the right side
-      racerTwoStart += addRandom();
-      racerTwo.style.left = racerTwoStart + 'px';
-      if (racerTwoStart >= racerTwoEnd) {
-        // end of race!
-        racerTwo.style.border = '5px solid red';
+      case keyL: {
+        // 'l' = the racer on the right side
+        racerTwoStart += addRandom();
+        racerTwo.style.left = racerTwoStart + 'px';
+        if (racerTwoStart >= racerTwoEnd) {
+          // end of race!
+          racerTwo.style.border = crown;
+          winner = keyL;
+        }
+        break;
       }
-      break;
-    }
 
-    default: {
-      //console.log("hysterical fat finger!");
+      default: {
+        //console.log("hysterical fat finger!");
+      }
     }
   }
-});
+}
+
+window.addEventListener('keypress', moveRacer);
+
+let checkInterval = null;
+function lookForWinner() {
+  if (winner) {
+    window.clearInterval(checkInterval);
+    window.removeEventListener('keypress', moveRacer);
+    console.log("we have a winer: " + winner);
+  } 
+}
+checkInterval = setInterval(lookForWinner, 500);

@@ -2,30 +2,64 @@
   box-sizing: border-box;
 }
 
+/**
+ * font-family: 'Fira Sans', sans-serif;
+ * font-family: 'Asap', sans-serif;
+ * font-family: 'Ruda', sans-serif;
+ */
+
 body {
-  background: rgba(0, 136, 136, .2);
-  margin: 0;
+  background: #fc0;
 }
 
-#container {
-  background: #088;
-  height: 300px;
-  margin: 0 auto;
-  width: 1000px;
-}
+@media only screen and (min-width: 768px) {}
+  body {
+    background: #deeaee;
+    font-family: 'Ruda', sans-serif;
+    margin: 0;
+  }
 
-#racer1 {
-  background: #fff;
-  height: 100px;
-  position: relative;
-  top: 25px;
-  width: 100px;
-}
+  a {
+    text-decoration: none;
+  }
 
-#racer2 {
-  background: #000;
-  height: 100px;
-  position: relative;
-  top: 45px;
-  width: 100px;
+  a:visited {
+    text-decoration: none;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  #container {
+    background: #b1cbbb;
+    height: 300px;
+    margin: 0 auto;
+    width: 750px;
+  }
+
+  #winningLine {
+    background: #c94c4c;
+    height: 300px;
+    left: 700px;
+    position: relative;
+    top: -200px;
+    width: 4px;
+  }
+
+  #racer1 {
+    background: url('../images/whiteHorse.png') no-repeat;
+    height: 100px;
+    position: relative;
+    top: 25px;
+    width: 100px;
+  }
+
+  #racer2 {
+    background: url('../images/blackHorse.png') no-repeat;
+    height: 100px;
+    position: relative;
+    top: 45px;
+    width: 100px;
+  }
 }
