@@ -11,10 +11,10 @@ creator:
 
 ## Introduction
 
-We are going to implement a "racer game" using JavaScript, HTML and CSS.  This will be your second "formal" challenge to assess your knowledge of programming fundamentals and HTML/CSS.
+This is my JavaScript Racer implementation. Thought maybe we could use a little Scandinavian touch.
 
-You will be working individually for this assignment, but we'll be guiding you as you get started.
-
+This was the inspiration for my landing page:
+![](images/Screen Shot 2017-07-09 at 3.38.31 PM.png)
 
 ## Exercise
 
@@ -57,10 +57,6 @@ There is no starter code for this project. You will have to make your own. Here 
 #### Deliverable
 
 You should turn in your HTML, CSS, and JavaScript files as a GitHub repository (fork or separate repo).  In your readme file, include a screenshot of the webpage you've used to build your landing page.
-
-Here's a screenshot of what a game page might look like:
-
-![](assets/chicken.png)
 
 ## Additional Resources
 - JavaScript [documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
