@@ -20,7 +20,7 @@ body {
 
 @media only screen and (min-width: 768px) {}
   body {
-    background: #deeaee;
+    background: rgba(222, 234, 238, 1);
     color: rgba(201, 76, 76, 1);
     font-family: 'Ruda', sans-serif;
     margin: 0;
@@ -35,9 +35,31 @@ body {
     text-decoration: none;
   }
 
+  caption {
+    font-size: 24px;
+  }
+
   h1 {
     font-size: 48px;
     text-align: center;
+  }
+
+  table {
+    background-color: #fff;
+    border-collapse: collapse;
+    font-size: 16px;
+    margin: 0 auto;
+  }
+
+  th,
+  td {
+    padding: 10px;
+  }
+
+  table,
+  th,
+  td {
+    border: 2px solid rgba(201, 76, 76, 1);
   }
 
   .button {
@@ -58,17 +80,18 @@ body {
     color: rgba(201, 76, 76, .8);
   }
 
-  #theGame {
+  .theGame {
     background: rgba(201, 76, 76, 1);
     border-color: rgba(201, 76, 76, 1);
     color: #fff;
   }
 
-  #theGame a {
+  .theGame a,
+  .theGame a:hover {
     color: #fff;
   }
 
-  #theGame:hover {
+  .theGame:hover {
     background: rgba(201, 76, 76, .8);
     border-color: rgba(201, 76, 76, .8);
   }
@@ -76,7 +99,7 @@ body {
   #container {
     background: rgba(177, 203, 187, 1);
     height: 300px;
-    margin: 0 auto;
+    margin: 10px auto;
     width: 750px;
   }
 
@@ -103,5 +126,14 @@ body {
     position: relative;
     top: 45px;
     width: 100px;
+  }
+
+  #scoreboard {
+    margin: 20px auto;
+    width: 750px;
+  }
+
+  #replay {
+    visibility: hidden;
   }
 }

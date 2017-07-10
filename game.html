@@ -6,12 +6,42 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+  <div id="scoreboard">
+    <table>
+      <caption>Current Standings</caption>
+      <thead>
+        <th></th>
+        <th>Wins</th>
+        <th>Losses</th>
+        <th>AWM</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td><img src="images/whiteHorse.png" alt="white horse" width=40% height=40%></td>
+          <td id="whiteWins"></td>
+          <td id="whiteLosses"></td>
+          <td id="whiteAWM"></td>
+        </tr>
+        <tr>
+          <td><img src="images/blackhorse.png" alt="black horse" width=40% height=40%></td>
+          <td id="blackWins"></td>
+          <td id="blackLosses"></td>
+          <td id="blackAWM"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
   <div id="container">
     <div id="racer1"></div>
     <div id="racer2"></div>
     <div id="winningLine"></div>
   </div>
-<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-<script src="js/app.js"></script>
+
+  <div id="replay" class="theGame button"><a href="game.html">Play again?</a></div>
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
