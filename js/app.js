@@ -88,7 +88,8 @@ function updateStats(winner) {
 
   if (winner === keyA) {
     newMargin = raceEnd - racerTwoPosition;
-    if (localStorage.whiteWins > 0) {
+
+    if (Number(localStorage.whiteWins) > 0) {
       wins = Number(localStorage.whiteWins);
       awm = Number(localStorage.whiteAWM);
       console.log("n: " + newMargin + " w: " + wins + " a: " + awm);
@@ -100,12 +101,13 @@ function updateStats(winner) {
 
     localStorage.whiteWins = Number(localStorage.whiteWins) + 1;
     localStorage.blackLosses = Number(localStorage.blackLosses) + 1;
-    wWins.textContent = localStorage.whiteWins;
-    bLosses.textContent = localStorage.blackLosses;
-    wAWM.textContent = localStorage.whiteAWM;
+    wWins.textContent = Number(localStorage.whiteWins);
+    bLosses.textContent = Number(localStorage.blackLosses);
+    wAWM.textContent = Number(localStorage.whiteAWM);
   } else {
     newMargin = raceEnd - racerOnePosition;
-    if (localStorage.blackWins > 0) {
+
+    if (Number(localStorage.blackWins) > 0) {
       wins = Number(localStorage.blackWins);
       awm = Number(localStorage.blackAWM);
       console.log("n: " + newMargin + " w: " + wins + " a: " + awm);
@@ -117,9 +119,9 @@ function updateStats(winner) {
 
     localStorage.blackWins = Number(localStorage.blackWins) + 1;
     localStorage.whiteLosses = Number(localStorage.whiteLosses)  + 1;
-    localStorage.blackAWM = (racerTwoPosition - racerOnePosition) / Number(localStorage.blackWins);
-    bWins.textContent = localStorage.blackWins;
-    wLosses.textContent = localStorage.whiteLosses;
+    bWins.textContent = Number(localStorage.blackWins);
+    wLosses.textContent = Number(localStorage.whiteLosses);
+    bAWM.textContent = Number(localStorage.blackAWM);
   }
 
   //console.log(newMargin);
